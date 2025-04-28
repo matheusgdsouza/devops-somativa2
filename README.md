@@ -1,6 +1,6 @@
 # API de Boas-vindas Simples
 
-Esta é uma API simples construída com FastAPI para aprender sobre CI/CD com GitHub Desktop.
+Este é um projeto simples construído com FastAPI para **demonstrar um fluxo de CI/CD básico usando GitHub Desktop**.
 
 ## Rotas Disponíveis:
 
