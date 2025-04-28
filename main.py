@@ -13,3 +13,11 @@ async def funcaoteste():
 @app.get("/saudar/{nome}")
 async def saudar_nome(nome: str):
     return {"mensagem": f"Olá, {nome}! Bem-vindo(a) à nossa API."}
+
+@app.get("/info/{nome}/{idade}")
+async def info_pessoa(nome: str, idade: int):
+    if idade < 18:
+        mensagem = f"{nome}, você é menor de idade."
+    else:
+        mensagem = f"{nome}, você é maior de idade."
+    return {"info": mensagem}
