@@ -1,14 +1,19 @@
 from fastapi import FastAPI
 import random
+
 app = FastAPI(description="Uma API de boas-vindas simples.")
 
 @app.get("/", summary="Retorna a mensagem de boas-vindas padrão")
 async def root():
     return {"message": "Hello World"}
 
+app = FastAPI()
+
+
 @app.get("/teste1")
 async def funcaoteste():
     return {"teste": True, "Hello World": "num_aleatorio", "num_aleatorio": random.randint(1, 100)}
+
 
 @app.get("/saudar/{nome}")
 async def saudar_nome(nome: str):
@@ -21,3 +26,4 @@ async def info_pessoa(nome: str, idade: int):
     else:
         mensagem = f"{nome}, você é maior de idade."
     return {"info": mensagem}
+
