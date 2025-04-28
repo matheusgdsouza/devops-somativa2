@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 import random
-app = FastAPI()
+app = FastAPI(description="Uma API de boas-vindas simples.")
 
-@app.get("/")
+@app.get("/", summary="Retorna a mensagem de boas-vindas padrão")
 async def root():
     return {"message": "Hello World"}
 
